@@ -1,0 +1,259 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+  }
+  
+  /* Header */
+  header {
+    background: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+  }
+  
+  /* Filters */
+  .filters {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .filters button {
+    margin: 5px;
+    padding: 10px 15px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  /* Products */
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin: 20px;
+  }
+  
+  .product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+  }
+  
+  .product-card h3 {
+    margin: 10px 0 5px;
+  }
+  
+  .product-card p {
+    margin: 0;
+    font-size: 14px;
+  }
+  
+  .product-card button {
+    margin-top: 10px;
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #222;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  /* Category Section */
+  .category-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 20px;
+  }
+  
+  .category-section button {
+    padding: 15px 25px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  /* Search Bar */
+  .search-bar {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .search-bar input {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* General Button */
+  button {
+    padding: 5px 10px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #c9302c;
+  }
+  
+  /* ===================== */
+  /* Checkout Page Styling */
+  /* ===================== */
+  
+  .cart-container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cart-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  /* Cart Table */
+  .cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-table th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .cart-table td img {
+    max-width: 60px;
+    border-radius: 6px;
+  }
+  
+  /* Remove Link */
+  .remove-link {
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .remove-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Total Section */
+  .total-section {
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  /* Checkout Button */
+  .checkout-btn {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    background-color: #28a745;
+    padding: 12px 30px;
+    font-size: 16px;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  
+  .checkout-btn:hover {
+    background-color: #218838;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .cart-table,
+    .cart-table thead,
+    .cart-table tbody,
+    .cart-table th,
+    .cart-table td,
+    .cart-table tr {
+      display: block;
+    }
+  
+    .cart-table th {
+      display: none;
+    }
+  
+    .cart-table td {
+      padding: 10px;
+      text-align: right;
+      position: relative;
+    }
+  
+    .cart-table td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      font-weight: bold;
+      text-align: left;
+      color: #666;
+    }
+  
+    .total-section {
+      text-align: center;
+    }
+  }
+  

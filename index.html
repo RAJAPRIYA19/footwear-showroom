@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StepIn Style</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff;
+      color: #333;
+    }
+
+    header {
+      background-color: #000;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero {
+      background: url('images/hero-shoes.jpg') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      margin-bottom: 0;
+      padding-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: 48px;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+    }
+
+    .categories {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 60px 20px;
+      gap: 40px;
+      margin-top: 0;
+      padding-top: 20px;
+    }
+
+    .category {
+      width: 280px;
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .category:hover {
+      transform: translateY(-5px);
+    }
+
+    .category img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+    }
+
+    .category h3 {
+      margin: 0;
+      padding: 20px;
+      font-size: 20px;
+      background-color: #f8f8f8;
+    }
+
+    footer {
+      background-color: #111;
+      color: #ccc;
+      padding: 40px 20px;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-section {
+      flex: 1;
+      min-width: 250px;
+      margin: 20px 0;
+    }
+
+    .footer-section h4 {
+      margin-bottom: 15px;
+      color: #fff;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-section ul li a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #444;
+      margin-top: 20px;
+      font-size: 14px;
+    }
+
+    /* Floating Chatbot Icon */
+    .chat-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: white;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h2 {
+        font-size: 30px;
+      }
+
+      .category {
+        width: 90%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-section {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>StepIn Style</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="checkout.php">Cart</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Walk the Talk with StepIn Style</h2>
+  </section>
+
+  <section class="categories">
+    <div class="category" onclick="selectCategory('Men')">
+      <img src="images/men_image_2.png" alt="Men">
+      <h3>Men</h3>
+    </div>
+    <div class="category" onclick="selectCategory('Women')">
+      <img src="images/women_image_3.png" alt="Women">
+      <h3>Women</h3>
+    </div>
+    <div class="category" onclick="selectCategory('Kids')">
+      <img src="images/kid_image_1.png" alt="Kids">
+      <h3>Kids</h3>
+    </div>
+  </section>
+
+  <!-- Floating Chatbot Icon -->
+  <div class="chat-icon" onclick="window.location.href='chatbot.html';">
+    💬
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>StepIn Style brings fashion-forward footwear for every step you take. Comfort meets elegance.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="checkout.php">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: support@stepinstyle.com</li>
+          <li>Phone: +91 98765 43210</li>
+          <li>Instagram: @stepinstyle</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <script>document.write(new Date().getFullYear())</script> StepIn Style. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

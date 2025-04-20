@@ -1,0 +1,97 @@
+[
+    {
+      "name": "Nike Air Zoom Pegasus 38",
+      "price": 2299,
+      "image": "images/men_image_1.png",
+      "category": "Men"
+    },
+    {
+      "name": "Adidas Ultraboost 21",
+      "price": 1999,
+      "image": "images/men_image_2.png",
+      "category": "Men"
+    },
+    {
+      "name": "Puma Flyer Runner",
+      "price": 1899,
+      "image": "images/men_image_3.png",
+      "category": "Men"
+    },
+    {
+      "name": "Reebok Flexagon Energy TR 3",
+      "price": 2899,
+      "image": "images/men_image_4.png",
+      "category": "Men"
+    },
+    {
+      "name": "ASICS Gel-Contend 7",
+      "price": 1699,
+      "image": "images/men_image_5.png",
+      "category": "Men"
+    },
+        {
+          "name": "Nike Air Zoom Pegasus 38 Women",
+          "price": 2299,
+          "image": "images/women_image_1.png",
+          "category": "Women"
+        },
+        {
+          "name": "Adidas Ultraboost 21 Women",
+          "price": 1999,
+          "image": "images/women_image_2.png",
+          "category": "Women"
+        },
+        {
+          "name": "Puma Flyer Runner Women",
+          "price": 1899,
+          "image": "images/women_image_3.png",
+          "category": "Women"
+        },
+        {
+          "name": "Reebok Flexagon Energy TR 3 Women",
+          "price": 2899,
+          "image": "images/women_image_4.png",
+          "category": "Women"
+        },
+        {
+          "name": "ASICS Gel-Contend 7 Women",
+          "price": 1699,
+          "image": "images/women_image_5.png",
+          "category": "Women"
+        },
+        {
+            "name": "Nike Kids Air Zoom Pegasus 38",
+            "price": 1799,
+            "image": "images/kid_image_1.png",
+            "category": "Kids"
+          },
+          {
+            "name": "Adidas Kids Ultraboost 21",
+            "price": 1599,
+            "image": "images/kid_image_2.png",
+            "category": "Kids"
+          },
+          {
+            "name": "Puma Kids Flyer Runner",
+            "price": 1399,
+            "image": "images/kid_image_3.png",
+            "category": "Kids"
+          },
+          {
+            "name": "Reebok Kids Flexagon Energy TR 3",
+            "price": 2499,
+            "image": "images/kid_image_4.png",
+            "category": "Kids"
+          },
+          {
+            "name": "ASICS Kids Gel-Contend 7",
+            "price": 1199,
+            "image": "images/kid_image_5.png",
+            "category": "Kids"
+          }
+        ]
+    
+      
+      
+     
+  

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat with Us | StepIn Style</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background-image: url('background2.PNG');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100vh;
+        }
+
+        header {
+        background-color: #000;
+        color: white;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        }
+
+        header h1 {
+        margin: 0;
+        font-size: 28px;
+        letter-spacing: 1px;
+        }
+
+        nav a {
+        color: white;
+        margin-left: 20px;
+        text-decoration: none;
+        font-weight: 500;
+        }
+
+        .chat-container {
+        margin-top: 100px; /* Add margin-top to prevent header overlap */
+        width: 100%;
+        max-width: 450px;
+        height: 600px;
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        
+        }
+
+        .chat-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #806206;
+        color: white;
+        padding: 15px 20px;
+        font-size: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        }
+
+        .chat-box {
+        padding: 25px;
+        height: 450px;
+        overflow-y: auto;
+        background: #fafafa;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        border-bottom: 2px solid #e0e0e0;
+        }
+
+        .chat-message {
+        padding: 15px 20px;
+        border-radius: 20px;
+        max-width: 80%;
+        line-height: 1.5;
+        font-size: 16px;
+        display: inline-block;
+        position: relative;
+        word-wrap: break-word;
+        }
+
+        .user-message {
+        background-color: #B88D09;
+        color: white;
+        align-self: flex-end;
+        border-bottom-right-radius: 5px;
+        }
+
+        .user-message::after {
+        content: "You";
+        font-size: 12px;
+        position: absolute;
+        bottom: -18px;
+        right: 10px;
+        color: #666;
+        }
+
+        .bot-message {
+        background-color: #f1f1f1;
+        color: #333;
+        align-self: flex-start;
+        border-bottom-left-radius: 5px;
+        }
+
+        .bot-message::after {
+        content: "Bot";
+        font-size: 12px;
+        position: absolute;
+        bottom: -18px;
+        left: 10px;
+        color: #999;
+        }
+
+        .chat-input-container {
+        display: flex;
+        border-top: 1px solid #e0e0e0;
+        padding: 15px;
+        background-color: #ffffff;
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        }
+
+        .chat-input-container input {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 25px;
+        font-size: 16px;
+        }
+
+        .chat-input-container button {
+        padding: 15px 20px;
+        background-color: #B88D09;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        margin-left: 15px;
+        }
+
+        .chat-input-container button:hover {
+        background-color: #c3a342;
+        }
+
+        .back-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #806206;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: bold;
+        }
+
+        footer {
+        background-color: #111;
+        color: #ccc;
+        padding: 40px 20px;
+        position: relative;
+        width: 100%;
+        bottom: 0;
+        margin-top: 20px; /* Ensures footer is not too close to the chat */
+        }
+
+        .footer-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: auto;
+        }
+
+        .footer-section {
+        flex: 1;
+        min-width: 250px;
+        margin: 20px 0;
+        }
+
+        .footer-section h4 {
+        margin-bottom: 15px;
+        color: #fff;
+        }
+
+        .footer-section ul {
+        list-style: none;
+        padding: 0;
+        }
+
+        .footer-section ul li {
+        margin-bottom: 8px;
+        }
+
+        .footer-section ul li a {
+        color: #ccc;
+        text-decoration: none;
+        }
+
+        .footer-section ul li a:hover {
+        text-decoration: underline;
+        }
+
+        .footer-bottom {
+        text-align: center;
+        padding-top: 20px;
+        border-top: 1px solid #444;
+        margin-top: 20px;
+        font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+        .chat-container {
+            width: 90%;
+            padding: 10px;
+        }
+
+        .chat-header h2 {
+            font-size: 20px;
+        }
+
+        .footer-content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .footer-section {
+            text-align: center;
+        }
+        }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1 style="padding-left: 10px;">StepIn Style</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="products.html">Shop</a>
+      <a href="checkout.php">Cart</a>
+    </nav>
+  </header>
+
+  <div class="chat-container">
+    <div class="chat-header">
+      <h2>Chat with Us</h2>
+    </div>
+
+    <div class="chat-box" id="chatBox">
+      <!-- Messages will appear here -->
+    </div>
+
+    <div class="chat-input-container">
+      <input type="text" id="userInput" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-button">Back</a>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>StepIn Style brings fashion-forward footwear for every step you take. Comfort meets elegance.</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="checkout.php">Cart</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul>
+          <li>Email: support@stepinstyle.com</li>
+          <li>Phone: +91 98765 43210</li>
+          <li>Instagram: @stepinstyle</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <script>document.write(new Date().getFullYear())</script> StepIn Style. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="chatbot.js"></script>
+</body>
+</html>
